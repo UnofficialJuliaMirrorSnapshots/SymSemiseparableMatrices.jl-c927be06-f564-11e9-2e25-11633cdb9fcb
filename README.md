@@ -14,7 +14,7 @@ as well as
 
 <img src="https://latex.codecogs.com/svg.latex?\dpi{100}&space;K=\text{\textbf{tril}}(UV^T)&space;&plus;&space;\text{\textbf{tril}}(VU^T,1)&space;&plus;&space;\text{\textbf{diag}}(d),&\quad%20U,V\in\mathbb{R}^{n\times%20p},&space;d\in\mathbb{R}^n" title="K=\text{\textbf{tril}}(UV^T) + \text{\textbf{tril}}(VU^T,1) + \text{\textbf{diag}}(d)" />
 
-All implemented algorithms (multiplication, Cholesky factorization, forward/backward substitution as well as various traces and determinants) run linear w.r.t. to n in time and memory using the structure of the two matrix types.
+All implemented algorithms (multiplication, Cholesky factorization, forward/backward substitution as well as various traces and determinants) run linear in time and memory w.r.t. to the number of data points ```n```.
 
 ## Usage
 First we need to create generators U and V that represent the symmetric matrix, ```K = tril(UV') + triu(VU',1)``` as well a test vector ```x```.
@@ -93,3 +93,6 @@ The Cholesky factorization of this matrix can be computed using ```DiaSymSemisep
 ![Solving a system using the implicit Cholesky factorization](https://i.imgur.com/mYBNTSr.png)
 
 ## References
+[1] M. S. Andersen and T. Chen. “Smoothing Splines and Rank Structured Matrices: Revisiting the Spline Kernel”. Manuscript submitted for publication. June 2019.
+
+[2] J. Keiner. "Fast Polynomial Transforms." Logos Verlag Berlin, 2011.
